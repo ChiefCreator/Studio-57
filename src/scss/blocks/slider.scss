@@ -34,11 +34,9 @@
     }
     &__img_top{
         clip-path: inset(0 0 50% 0);
-        // transition: transform 1.3s cubic-bezier(1,.01,.81,.66);
     }
     &__img_bottom{
         clip-path: inset(50% 0 0 0);
-        // transition: transform 1.4s cubic-bezier(1,.01,.81,.66);
     }
     &__navigation{
         position: absolute;
