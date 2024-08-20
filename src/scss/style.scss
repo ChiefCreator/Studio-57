@@ -1,0 +1,14 @@
+@import "./base/vars";
+@import "./base/mixin";
+@import "./base/reset";
+@import "./base/base";
+
+@import "./pages/index.scss";
+
+@import "./blocks/cursor.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/content.scss";
+@import "./blocks/header.scss";
+@import "./blocks/link.scss";
+@import "./blocks/link-icon.scss";
+@import "./blocks/logo.scss";

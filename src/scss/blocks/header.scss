@@ -1,0 +1,16 @@
+.header{
+    pointer-events: all;
+    &__wrapper{
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        flex: 0 0 180px;
+    }
+    &__links{
+        display: flex;
+        gap: 80px;
+    }
+}

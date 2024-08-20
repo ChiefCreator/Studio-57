@@ -1,0 +1,27 @@
+.link{
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    &__wrapper{
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+    &__word{
+        display: inline-block;
+    }
+    &__letter{
+        display: inline-block;
+        transform: translateY(0px);
+        position: relative;
+        &::before{
+            content: attr(data-letter);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(100%);
+        }
+    }
+}
