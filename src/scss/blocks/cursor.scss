@@ -7,7 +7,7 @@
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        border: 2px solid #ffcc2a;
+        border: 2px solid $color-primary;
         transition: all .5s ease;
     }
     &__line{
@@ -15,7 +15,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background-color: #ffcc2a;
+        background-color: $color-primary;
         transition: all .5s ease;
         &:nth-child(2) {
             top: 14%;
