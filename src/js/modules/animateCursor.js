@@ -60,8 +60,8 @@ function animateCursor() {
             centerY: $cursor.offsetHeight / 2,
         }
 
-        if (event.target.closest("[data-cursor='cursorScale']")) {
-            const $target = event.target.closest("[data-cursor='cursorScale']");
+        if (event.target.closest("[data-cursor-effect='cursorGravity']")) {
+            const $target = event.target.closest("[data-cursor-effect='cursorGravity']");
             const targetProperties = {
                 left: $target.getBoundingClientRect().left,
                 top: $target.getBoundingClientRect().top,
@@ -76,9 +76,7 @@ function animateCursor() {
 
             $cursor.animate({left: `${cursorProperties.currentPosX + offsetXTargetCenter}px`, top: `${cursorProperties.currentPosY + offsetYTargetCenter}px`}, {duration: 2400, fill: "forwards"});
         }
-        else {
-            $cursor.animate({left: `${cursorProperties.currentPosX}px`, top: `${cursorProperties.currentPosY}px`}, {duration: 1200, fill: "forwards"});
-        }
+        else $cursor.animate({left: `${cursorProperties.currentPosX}px`, top: `${cursorProperties.currentPosY}px`}, {duration: 1200, fill: "forwards"});
     }
     function mouseDownCursorHandler() {
         $cursor.classList.add("cursor_active");

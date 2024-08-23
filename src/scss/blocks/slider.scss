@@ -45,7 +45,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        cursor: pointer;
+        pointer-events: none;
     }
     &__button{
         position: absolute;
@@ -53,6 +53,7 @@
         transform: translateY(-50%);
         width: 200px;
         height: 70%;
+        pointer-events: all;
         cursor: pointer;
         &:hover{
             .fullscreen-slider__button-line{
@@ -105,5 +106,72 @@
         position: relative;
         z-index: 11;
         text-align: center;
+        pointer-events: none;
+    }
+}
+.zoom-block{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    &__event-arrea{
+        display: block;
+        position: absolute;
+        width: 50%;
+        aspect-ratio: 1/1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__img-wrapper{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity 1s linear( 0, 0.0012 14.95%, 0.0089 22.36%, 0.0297 28.43%, 0.0668 33.43%, 0.0979 36.08%, 0.1363 38.55%, 0.2373 43.07%, 0.3675 47.01%, 0.5984 52.15%, 0.7121 55.23%, 0.8192 59.21%, 0.898 63.62%, 0.9297 66.23%, 0.9546 69.06%, 0.9733 72.17%, 0.9864 75.67%, 0.9982 83.73%, 1 ), transform 1s linear( 0, 0.0012 14.95%, 0.0089 22.36%, 0.0297 28.43%, 0.0668 33.43%, 0.0979 36.08%, 0.1363 38.55%, 0.2373 43.07%, 0.3675 47.01%, 0.5984 52.15%, 0.7121 55.23%, 0.8192 59.21%, 0.898 63.62%, 0.9297 66.23%, 0.9546 69.06%, 0.9733 72.17%, 0.9864 75.67%, 0.9982 83.73%, 1 );
+        cursor: pointer;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+    }
+    &__info{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title-wrapper{
+        overflow: hidden;
+    }
+    &__title{
+        color: white;
+        font-size: 20px;
+        font-weight: 200;
+        text-transform: uppercase;
+        transform: translateY(100%);
+    }
+    &__line{
+        display: block;
+        width: 0;
+        height: .5px;
+        background-color: white;
+    }
+    &_active{
+        .zoom-block__img-wrapper{
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 }

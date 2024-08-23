@@ -1,8 +1,12 @@
 .link-icon{
     display: inline-block;
     cursor: pointer;
+    transition: transform .5s ease;
     &__img{
         width: 26px;
         aspect-ratio: 1/1;
+    }
+    &:hover{
+        transform: scale(1.1);
     }
 }

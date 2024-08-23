@@ -32,7 +32,7 @@
     pointer-events: none;
 }
 .hover-scale{
-    transition: transform .2s ease-in;
+    transition: transform .5s ease;
     &:hover{
         transform: scale(1.05);
     }
